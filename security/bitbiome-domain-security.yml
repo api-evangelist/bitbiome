@@ -1,0 +1,26 @@
+generated: '2026-09-28'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: equityzen.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 11 23:59:59 2027 GMT
+  hsts: null
+- host: bitbiome.bio
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 18 20:18:32 2026 GMT
+  hsts: false
+domains:
+- domain: equityzen.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: bitbiome.bio
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false

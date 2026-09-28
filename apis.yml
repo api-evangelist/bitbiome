@@ -1,23 +1,67 @@
 aid: bitbiome
+
 name: Bitbiome
-description: 'Bitbiome is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Bitbiome is a data‑focused biotechnology platform that aggregates, curates, and provides access to a wide range of biological datasets
+  and analytical tools. It aims to accelerate research and development in life sciences by offering APIs for dataset discovery, metadata retrieval,
+  and integration with computational pipelines. The company positions itself as a bridge between raw biological data and actionable insights for
+  scientists, developers, and enterprises in the biotech sector.
+
 url: https://raw.githubusercontent.com/api-evangelist/bitbiome/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Data
+- APIs
+- Life Sciences
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bitbiome-hosts.yml
+- type: Vendors
+  url: vendors/bitbiome-vendors.yml
+- type: DomainSecurity
+  url: security/bitbiome-domain-security.yml
 - type: Website
   url: https://equityzen.com/company/bitbiome
+
+apis:
+- name: Bitbiome API
+  description: API for accessing Bitbiome dataset metadata and discovery.
+  humanURL: https://bitbiome.bio/
+  aid: bitbiome:bitbiome-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's WordPress REST endpoint at https://bitbiome.bio/wp-json/ returns JSON but no OpenAPI or other machine‑readable contract.
+  evidence:
+  - url: https://bitbiome.bio/wp-json/
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

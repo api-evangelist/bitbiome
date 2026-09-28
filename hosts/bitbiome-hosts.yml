@@ -1,0 +1,31 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 0
+  other_domain: 1
+  platform: 1
+  roles:
+  - other
+  - website
+hosts:
+- host: bitbiome.bio
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - docs
+  registrable_domain: bitbiome.bio
+  role: other
+  relation: other-domain
+- host: equityzen.com
+  found_by:
+  - pointer
+  types:
+  - Website
+  serves: []
+  registrable_domain: equityzen.com
+  role: website
+  relation: platform
